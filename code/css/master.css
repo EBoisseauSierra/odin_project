@@ -1,0 +1,147 @@
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    GLOBAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+body{
+    display: table;
+    min-height: 100%;
+    width: 100vw;
+    margin: 0 0 30px 0; /*40px = footer height*/
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+header{
+    color: #333;
+    top: 0;
+    width: 100vw;
+    display: table;
+}
+.header_links_block{
+    float: right;
+    padding: 1% 2.5vw;
+    display: table-cell;
+}
+.header_link{
+    padding: 1ex .5em;
+    display: table-cell;
+    vertical-align: middle;
+    height: 2.5ex
+}
+.header_link img{
+    height: 120%;
+    vertical-align: middle;
+}
+.last_link_of_the_row{
+    padding: 1ex 0 1ex .5em;
+}
+a.no_underline_when_over:hover{
+    text-decoration: none;
+}
+div.shadow_hovered_button:hover{
+    box-shadow: 0px 0px 2px #BBB;
+}
+input.link_button:hover{
+    text-decoration: none;
+    box-shadow: 0px 0px 2px #BBB;
+}
+input.search_bar:active, input.search_bar:focus{
+    box-shadow: 0px 0px 2px #BBB;
+}
+input.search_bar:hover{
+    box-shadow: 0px 0px 4px #BBB;
+}
+.link_button{
+    border-radius: 3px;
+    vertical-align: inherit;
+    padding: 1.3ex 2ex;
+    font-weight: bold;
+}
+.blue_button{
+    background-color: #4386FA;
+    color: white;
+}
+.grey_button{
+    background-color: #F5F5F5;
+    color: #757575;
+}
+.query_button{
+    font-size: 13px;
+    margin: 1ex .5ex;
+    border: 0;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    MAIN CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+section{
+    display: block;
+    width: 95vw;
+    margin: 0 2.5vw;
+    clear: both;
+}
+.centered_main_block{
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+.first_main_block{
+    margin-top: 10%;
+}
+.search_bar{
+    min-width: 20em;
+    border: #CCC solid 1px;
+    font-size: larger;
+    padding: 1ex 1em;
+    margin: 1ex;
+    width: 40vw;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    FOOTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+footer{
+    background-color: #eee;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    position: absolute;
+    height: 40px;
+    padding: 0 2.5vw;
+    bottom: 0;
+    width: 95vw;
+    display: table;
+}
+.footer_block{
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+}
+.footer_left{
+    float: left;
+}
+.footer_right{
+    float: right;
+}
+
+.footer_link{
+    padding: 1ex .5em;
+    display: table-cell;
+    vertical-align: middle;
+    height: 2.5ex;
+    color:#888;
+    line-height: 30px;
+}
