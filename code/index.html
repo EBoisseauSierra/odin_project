@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <!-- meta -->
         <meta charset="utf-8">
@@ -21,49 +21,54 @@
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <header>
             <!--%%%% header main part %%%%-->
-            <!--google_logo-->
-            <img src="" alt="Google logo" class="header_google_logo"/>
+            <section class="header_main_part">
+                <!--google_logo-->
+                <a class="header_main_element header_google_logo_lnk" href="#">
+                    <img src="img/googlelogo.png" alt="Google logo" style="width: 120px; height: 44px;"/>
+                </a>
 
-            <!--research bar-->
-            <div class="header_reseach_bar">
-                the odin project
-            </div>
+                <!--research bar-->
+                <div class="header_main_element header_research_bar centered_container">
+                    the odin project
+                </div>
 
-            <!--login buttons-->
-            <div class="header_settings_links">
-                <ul class="links_list">
-                    <li>Google apps</li>
-                    <li>Sign in</li>
-                </ul>
-            </div>
-
+                <!--login buttons-->
+                <aside class="header_main_element header_settings_links">
+                    <ul class="links_list">
+                        <li>Google apps</li>
+                        <li>Sign in</li>
+                    </ul>
+                </aside>
+            </section>
             <!--%%%% header links to result types%%%% -->
-            <!--left links-->
-            <div class="header_research_links header_research_links_main">
-                <ul class="links_list">
-                    <li class="link_current_results_type">All</li>
-                    <li>News</li>
-                    <li>Video</li>
-                    <li>Shopping</li>
-                    <li>Images</li>
-                    <li>More</li>
-                </ul>
-            </div>
+            <nav class="centered_container">
+                <!--left links-->
+                <div class="header_research_links header_research_links_main">
+                    <ul class="links_list">
+                        <li class="link_current_results_type"><a href="#">All</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Shopping</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
+                </div>
 
-            <!--right lings-->
-            <div class="header_research_links header_research_links_subs">
-                <ul class="links_list">
-                    <li>Settings</li>
-                    <li>Tools</li>
-                </ul>
-            </div>
+                <!--right lings-->
+                <div class="header_research_links header_research_links_subs">
+                    <ul class="links_list">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Tools</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!--                            BODY                                        -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-        <section class="centered_container">
+        <main class="centered_container">
             <!--number of results-->
             <section class="main_body_element number_of_results">
                 About 551,000 results (0.65 seconds)
@@ -71,12 +76,12 @@
 
             <!--result block-->
             <section class="main_body_element google_result">
-                <p class="result_element result_title">
+                <h1 class="result_element result_title">
                     The Odin Project: Learn Web Development for Free Using Ruby on Rails
-                </p>
-                <p class="result_element result_url">
+                </h1>
+                <h2 class="result_element result_url">
                     www.theodinproject.com/
-                </p>
+                </h2>
                 <dl class="result_element result_page_description">
                     <dt class="result_page_date"></dt>
                     <dd class="result_page_description">The Odin Project empowers aspiring web developers to learn together.</dd>
@@ -84,12 +89,12 @@
             </section>
             <!--result block-->
             <section class="main_body_element google_result">
-                <p class="result_element result_title">
+                <h1 class="result_element result_title">
                     A Better Way to Learn Programming? Notes on The Odin Project ...
-                </p>
-                <p class="result_element result_url">
+                </h1>
+                <h2 class="result_element result_url">
                     everydayutilitarian.com/essays/notes-on-the-odin-project/
-                </p>
+                </h2>
                 <dl class="result_element result_page_description">
                     <dt class="result_page_date">Jul 9, 2014</dt>
                     <dd class="result_page_description">That being said, I do have some modifications I'd like to see to The Odin Project. So consider doing The Odin Project, except with the following ...</dd>
@@ -97,12 +102,12 @@
             </section>
             <!--result block-->
             <section class="main_body_element google_result">
-                <p class="result_element result_title">
+                <h1 class="result_element result_title">
                     How does The Odin Project compare to programming bootcamps like ...
-                </p>
-                <p class="result_element result_url">
+                </h1>
+                <h2 class="result_element result_url">
                     https://www.quora.com/How-does-The-Odin-Project-compare-to-programming-bootc...
-                </p>
+                </h2>
                 <dl class="result_element result_page_description">
                     <dt class="result_page_date"></dt>
                     <dd class="result_page_description">Background (I'm so relevant?!) I graduated from Hack Reactor (read about my experiences ... However, I did not dedicate myself to learn via The Odin Project.</dd>
@@ -110,12 +115,12 @@
             </section>
             <!--result block-->
             <section class="main_body_element google_result">
-                <p class="result_element result_title">
+                <h1 class="result_element result_title">
                     People who have finished The Odin Project, what are your capabilities ...
-                </p>
-                <p class="result_element result_url">
+                </h1>
+                <h2 class="result_element result_url">
                     https://www.reddit.com/r/.../people_who_have_finished_the_odin_project_what/
-                </p>
+                </h2>
                 <dl class="result_element result_page_description">
                     <dt class="result_page_date">Jan 12, 2015</dt>
                     <dd class="result_page_description">In fact, the creator of The Odin Project is a bootcamp alumnus (from which I can't remember off the top of my head) and built The Odin Project ...</dd>
@@ -138,9 +143,9 @@
             -->
             <!--related searches-->
             <section class="main_body_element related_search">
-                <div class="related_search_title">
+                <h1 class="related_search_title">
                     Searches related to the odin project
-                </div>
+                </h1>
                 <ul class="related_search_links related_search_group1">
                     <li>the odin project review</li>
                     <li>the odin project reddit</li>
@@ -159,7 +164,7 @@
             <section class="bottom_goooogle_links">
                 Gooooogle
             </section>
-        </section>
+        </main>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 <!--                           FOOTER                                       -->
@@ -168,22 +173,22 @@
         <footer>
             <section class="centered_container">
             <!--location-->
-                <div class="footer_location">
-                    <ul>
+                <nav class="footer_element footer_location">
+                    <ul class="links_list">
                         <li>Somewhere, Over the rainbow - From your search history</li>
-                        <li>Use precise location</li>
-                        <li>Learn more</li>
+                        <li><a href="#">Use precise location</a></li>
+                        <li><a href="#">Learn more</a></li>
                     </ul>
-                </div>
+                </nav>
             <!--links-->
-                <div class="footer_links">
-                    <ul>
-                        <li>Help</li>
-                        <li>Send feedback</li>
-                        <li>Privacy</li>
-                        <li>Terms</li>
+                <nav class="footer_element footer_links">
+                    <ul class="links_list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Send feedback</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
                     </ul>
-                </div>
+                </nav>
             </section>
         </footer>
     </body>
