@@ -40,6 +40,7 @@ footer {
 }
 .related_search_links{
     display: inline-block;
+    margin-right: 24px;
 }
 .header_main_element {
     height: 50px;
@@ -63,7 +64,7 @@ footer {
 .header_settings_links li{
     margin: 0 10px;
 }
-.header_research_bar {
+.header_research_bar{
     position: absolute;
     display: inline-block;
     left: 150px;
@@ -121,21 +122,101 @@ header a:hover, footer a:hover{
     color: #AAA;
 }
 
-.google_result h1, related_search_links li{
+.google_result a, .related_search_links a {
     color:#1a0dab;
+    text-decoration: none;
 }
-.google_result h1 {
-    font-size: 17px;
+.google_result a:hover, .related_search_links a:hover {
+    text-decoration: underline;
+}
+.google_result h1, .related_search h1 {
+    font-size: 18px;
 }
 .google_result h2 {
     color: #006621;
+    line-height: 16px;
+}
+.google_result h2::after {
+    content: "   ▾"
+}
+.google_result dl{
+    line-height: 16px;
 }
 .google_result dd{
     color: #545454;
 }
-.google_result dd:not(:empty)::after{
+.google_result dt:not(:empty)::after{
     content: " - "
 }
 .google_result dt{
     color:#808080;
+}
+.result_page_description .query_term{
+    font-weight: bold;
+}
+.related_search_links li {
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.related_search .related_search_links ul {
+    margin-right: 3em;
+}
+.related_search_links .query_term{
+    font-weight: normal;
+}
+.related_search h1{
+    padding-bottom: 20px;
+    color: #222
+}
+.number_of_results{
+    color:#808080;
+    line-height: 43px;
+    margin-bottom: 5px;
+}
+.footer_location::before{
+    content: "⬤ ";
+    font-size: 10px;
+    line-height: 39px;
+    padding-right: 3px;
+    vertical-align: top;
+    display: inline-block;
+}
+.header_research_bar span{
+    box-shadow: 0px 2px 2px #EBEBEB;
+    background-color: transparent;
+    display: table;
+    width: 100%;
+    line-height: 44px;
+    padding-left: 1em;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    -webkit-transition-duration:450ms;
+            transition-duration:450ms;
+}
+.header_research_bar span:hover{
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+    -webkit-transition-duration:450ms;
+            transition-duration:450ms;
+
+}
+#research{
+    line-height: 44px;
+    padding-left: 1em;
+    background-color: transparent;;
+    border: none;
+    display: inline-block;
+    width:560px;
+    font-size: 16px;
+}
+#lense{
+    background-color: transparent;
+    border: none;
+    float: right;
+    display:inline-block;
+    padding-right: 12px;
+    height: 46px;
+    vertical-align: middle;
 }
