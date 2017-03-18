@@ -48,12 +48,15 @@ footer {
 }
 .header_google_logo_lnk{
     width: 120px;
-    line-height: 43px;
-    height: 44px;
     display: inline-block;
     margin-left: 13px;
     margin-right: 17px;
     float: left;
+    position: relative;
+}
+.header_google_logo_lnk img{
+    position: absolute;
+    bottom: 0;
 }
 .header_settings_links{
     display: inline-block;
@@ -219,4 +222,31 @@ header a:hover, footer a:hover{
     padding-right: 12px;
     height: 46px;
     vertical-align: middle;
+}
+.header_settings_links li{
+    display: flex-box;
+}
+.header_settings_links ul{
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+            align-items: center;
+    height: inherit;
+}
+#header_main_button{
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 30px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #4585F2;
+    border-radius: 2px;
+    display: inline-block;
+    line-height: 30px;
+}
+#header_main_button:hover{
+    color: #FFF;
+    box-shadow: 0px 2px 2px #CCC;
+    -webkit-transition-duration:300ms;
+            transition-duration:300ms;
 }
