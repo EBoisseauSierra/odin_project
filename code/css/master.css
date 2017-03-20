@@ -250,3 +250,30 @@ header a:hover, footer a:hover{
     -webkit-transition-duration:300ms;
             transition-duration:300ms;
 }
+#gooogle_container{
+    height: 80px;
+    width: 332px;
+    margin: 15px auto;
+    color: #272727;
+    font-size: 13px;
+}
+.bottom_goooogle_links img{
+    height:40px;
+    width: auto;
+}
+.bottom_goooogle_links div, .bottom_goooogle_links a{
+    display:inline-block;
+    float: left;
+    height: 80px;
+    line-height: 40px;
+    vertical-align: top;
+    text-align: center;
+
+}
+.bottom_goooogle_links a{
+    color: #4585F2;
+    text-decoration: none;
+}
+.bottom_goooogle_links a:hover{
+    text-decoration: underline;
+}
