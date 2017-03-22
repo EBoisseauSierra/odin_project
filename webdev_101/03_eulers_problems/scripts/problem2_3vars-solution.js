@@ -1,3 +1,4 @@
+//31 steps
 var fib_1 = 1;
 var fib_2 = 2;
 
