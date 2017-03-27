@@ -1,9 +1,9 @@
 $( document ).ready(
     function() {
         $("#spinner").remove();
-        $("main").removeClass("loading");
+        $("#sketchpad").removeClass("loading");
         for (i=1;i<=100*100;i++){
-            $('main').append('<div class="pixel"></div>');
+            $('#sketchpad').append('<div class="pixel"></div>');
         }
     }
 );

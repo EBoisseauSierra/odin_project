@@ -5,14 +5,22 @@
         <title>Sketchpad</title>
         <link rel="stylesheet" type="text/css" href='css/reset.css'/>
         <link rel="stylesheet" type="text/css" href='css/master.css'/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1>SketchPad</h1>
-        <main class="loading">
-            <div id="spinner"></div>
+        <main>
+            <h1>SketchPad</h1>
+            <section class="loading" id="sketchpad">
+                <div id="spinner"></div>
+            </section>
+            <ul id="main-buttons-area">
+                <li class="main-button" id='clear'>clear</li>
+                <li class="fa fa-cog main-button" id="settings-button"></li>
+            </ul>
         </main>
-        <div id='clear'>clear</div>
+        <aside class="">
 
+        </aside>
         <script src="js/jQuery.js"></script>
         <script type="text/javascript" src="js/master.js" charset="utf-8"></script>
     </body>
