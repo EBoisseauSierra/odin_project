@@ -2,14 +2,15 @@ $( document ).ready(
     function() {
         $("#spinner").remove();
         $("#sketchpad").removeClass("loading");
+        var newPixel = '<div class="pixel"></div>'
         for (i=1;i<=100*100;i++){
-            $('#sketchpad').append('<div class="pixel"></div>');
+            $('#sketchpad').append(newPixel);
         }
     }
 );
 $( document ).ready(
     function(){
-        $(".pixel").on('mouseover',function(){
+        $(".pixel", "#sketchpad").on('mouseover',function(){
             $(this).addClass("drawn");
         });
     }
@@ -19,10 +20,11 @@ $(document).ready(
     function(){
         $("#clear").on('click',function(event){
             event.preventDefault();
-            $(".pixel").removeClass("drawn");
+            $(".pixel", "#sketchpad").removeClass("drawn");
         });
     }
 );
+$(".settings-list").hide();
 $(document).ready(
     function(){
         $("#settings-size").on('click',function(){
@@ -41,6 +43,7 @@ $(document).ready(
     function(){
         $("#settings-button").on('click',function(){
             $("#settings-mainlist").slideToggle(250);
+            $(".settings-sublist", "#settings-mainlist").hide();
         });
     }
 );
