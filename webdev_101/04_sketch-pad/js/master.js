@@ -2,7 +2,7 @@ $( document ).ready(
     function() {
         $("#spinner").remove();
         $("#sketchpad").removeClass("loading");
-        var newPixel = '<div class="pixel"></div>'
+        var newPixel = '<div class="pixel" data-color="blank"></div>'
         for (i=1;i<=100*100;i++){
             $('#sketchpad').append(newPixel);
         }
@@ -10,8 +10,8 @@ $( document ).ready(
 );
 $( document ).ready(
     function(){
-        $(".pixel", "#sketchpad").on('mouseover',function(){
-            $(this).addClass("drawn");
+        $("#sketchpad").on('mouseover',".pixel",function(){
+            $(this).attr("data-color",drawColor);
         });
     }
 );
@@ -20,7 +20,7 @@ $(document).ready(
     function(){
         $("#clear").on('click',function(event){
             event.preventDefault();
-            $(".pixel", "#sketchpad").removeClass("drawn");
+            $(".pixel", "#sketchpad").attr("data-color","blank");
         });
     }
 );
@@ -39,44 +39,17 @@ $(document).ready(
         });
     }
 );
-$(document).ready(
-    function(){
-        $("#settings-button").on('click',function(){
-            $("#settings-mainlist").slideToggle(250);
-            $(".settings-sublist", "#settings-mainlist").hide();
-        });
-    }
-);
+$(document).ready(function(){
+    $("#settings-button").on('click',function(){
+        $("#settings-mainlist").slideToggle(250);
+        $(".settings-sublist", "#settings-mainlist").hide();
+    });
+});
 
-var drawColor = '#555'
+drawColor = 'black'
 
-var pickColor = function(colorName){
-    switch (colorName) {
-        case 'pink':
-            drawColor = '#f0a4ab'
-            break;
-        case 'green':
-            drawColor = '#d9e0b0'
-            break;
-        case 'maroon':
-            drawColor = '#f9dc86'
-            break;
-        case 'orange':
-            drawColor = '#ffa517'
-            break;
-        case 'red':
-            drawColor = '#f57650'
-            break;
-        case 'blue':
-            drawColor = '#3591d0'
-            break;
-        case 'lightblue':
-            drawColor = '#bdcee2'
-            break;
-        case 'black':
-            drawColor = '#555'
-            break;
-        default:
-            drawColor = '#555554'
-    }
-}
+$(document).ready(function(){
+    $("#settings-mainlist").on('click', ".color-item", function(){
+        drawColor = this.getAttribute("data-color")
+    });
+});

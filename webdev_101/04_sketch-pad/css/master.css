@@ -29,8 +29,7 @@ h1{
     .pixel{
         height: 5px;
         width: 5px;
-        background-color: #FFF;
-
+        /*background-color: #FFF;*/
     }
         .drawn{
             background-color: #555;
@@ -148,10 +147,10 @@ h1{
         text-align: center;
     }
         .sub-setting-item:first-child {
-            margin-top: 12px;
+            margin-bottom: 12px;
         }
         .sub-setting-item:last-child{
-            margin-bottom: 12px;
+            margin-top: 12px;
         }
 
         [data-size=S]{
@@ -192,4 +191,7 @@ h1{
         }
         [data-color=black] {
             background-color: #555;
+        }
+        [data-color=blank] {
+            background-color: #FFF;
         }
