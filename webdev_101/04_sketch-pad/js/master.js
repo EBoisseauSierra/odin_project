@@ -1,11 +1,11 @@
+pixelSize = "6";
+nbPixelsSide = 600/(+pixelSize);
+newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
 $( document ).ready(
     function() {
-        $("#spinner").remove();
+        $("#spinner").hide();
         $("#sketchpad").removeClass("loading");
-        var newPixel = '<div class="pixel" data-color="blank"></div>'
-        for (i=1;i<=100*100;i++){
-            $('#sketchpad').append(newPixel);
-        }
+        for (i=1;i<=nbPixelsSide*nbPixelsSide;i++,$('#sketchpad').append(newPixel)){}
     }
 );
 $( document ).ready(
@@ -61,4 +61,17 @@ $(document).ready(function(){
 });
 
 $(document).ready(function () {
+    $("#settings-mainlist").on('click',".size-item",function () {
+        console.log("clicked");
+        $("#spinner").show();
+        $("#sketchpad").empty();
+        console.log("reset");
+        pixelSize = this.getAttribute("data-size")
+        console.log(pixelSize);
+        newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
+        nbPixelsSide = 600/(+pixelSize);
+        for(i=1;i<=nbPixelsSide*nbPixelsSide;i++,$('#sketchpad').append(newPixel)){}
+        console.log("done");
+        $("#spinner").hide();
+    });
 });
