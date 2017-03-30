@@ -47,9 +47,18 @@ $(document).ready(function(){
 });
 
 drawColor = 'black'
+selectedCross='<i class="fa fa-times" aria-hidden="true" id="chosen-color"></i>'
 
 $(document).ready(function(){
+    $("#"+drawColor).html(selectedCross);
     $("#settings-mainlist").on('click', ".color-item", function(){
+        $("#"+drawColor).html("");
         drawColor = this.getAttribute("data-color")
+        $("#"+drawColor).html(selectedCross);
     });
+
+});
+
+$(document).ready(function () {
+    $("")
 });

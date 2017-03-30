@@ -166,10 +166,19 @@ h1{
             font-weight: bolder;
         }
     .color-item{
-        width: 24px;
-        height: 24px;
+        -webkit-align-items: center;
+                align-items: center;
         border-radius: 2px;
+        display: flex;
+        -webkit-justify-content: center;
+                justify-content: center;
+        height: 24px;
+        width: 24px;
     }
+        #chosen-color{
+            color: #FFF;
+            margin: -1px 0 0 -1px;
+        }
 
         [data-color=pink] {
             background-color: #f0a4ab;
