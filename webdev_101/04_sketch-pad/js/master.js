@@ -41,6 +41,7 @@ $(document).ready(
 );
 $(document).ready(function(){
     $("#settings-button").on('click',function(){
+        $("#settings-button").toggleClass("settings-list-visible");
         $("#settings-mainlist").slideToggle(250);
         $(".settings-sublist", "#settings-mainlist").hide();
     });
@@ -60,5 +61,4 @@ $(document).ready(function(){
 });
 
 $(document).ready(function () {
-    $("")
 });
