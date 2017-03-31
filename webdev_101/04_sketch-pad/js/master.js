@@ -1,10 +1,38 @@
-pixelSize = "12";
-nbPixelsSide = 600/(+pixelSize);
-newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
+var pixelSize = "12";
+var nbPixelsSide = 600/(+pixelSize);
+var newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
+
+var colorCurrentBrushSize = function  foo(){
+        console.log("colorCurrentBrushSize");
+        var listItems = $("#subsettings-size li");
+        listItems.each(function(){
+            console.log($(this));
+            if ($(this).attr("data-size") == pixelSize) {
+                $(this).addClass('selected-size');
+                console.log("add selected-size to "+pixelSize);
+                return true
+            }
+        });
+    }
+var removeColorCurrentBrushSize = function  foo(){
+        console.log("colorCurrentBrushSize");
+        var listItems = $("#subsettings-size li");
+        listItems.each(function(){
+            console.log($(this));
+            if ($(this).attr("data-size") == pixelSize) {
+                $(this).removeClass('selected-size');
+                console.log("add selected-size to "+pixelSize);
+                return true
+            }
+        });
+    }
+
+
 $( document ).ready(
     function() {
         $("#spinner").hide();
         $("#sketchpad").removeClass("loading");
+        colorCurrentBrushSize();
         for (i=1;i<=nbPixelsSide*nbPixelsSide;i++,$('#sketchpad').append(newPixel)){}
     }
 );
@@ -66,6 +94,7 @@ $(document).ready(function () {
         $("#spinner").show();
         $("#sketchpad").empty();
         console.log("reset");
+        removeColorCurrentBrushSize();
         pixelSize = this.getAttribute("data-size")
         console.log(pixelSize);
         newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
@@ -73,5 +102,10 @@ $(document).ready(function () {
         for(i=1;i<=nbPixelsSide*nbPixelsSide;i++,$('#sketchpad').append(newPixel)){}
         console.log("done");
         $("#spinner").hide();
+        colorCurrentBrushSize();
     });
+});
+
+$(document).ready(function() {
+    $("#subsettings-size .size-item")
 });

@@ -195,6 +195,9 @@ h1{
         [data-size="50"]{
             font-weight: bolder;
         }
+        .selected-size{
+            color:#FFF;
+        }
     .color-item{
         -webkit-align-items: center;
                 align-items: center;
