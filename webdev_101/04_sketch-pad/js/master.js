@@ -1,4 +1,4 @@
-pixelSize = "6";
+pixelSize = "12";
 nbPixelsSide = 600/(+pixelSize);
 newPixel = '<div class="pixel" data-color="blank" data-pixsize='+pixelSize+'></div>'
 $( document ).ready(
