@@ -19,12 +19,12 @@ h1{
     text-align: center;
 }
 #sketchpad{
-    margin: 10px auto;
-    width: 600px;
-    height: 600px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+    height: 600px;
+    margin: 10px auto;
+    width: 600px;
 }
     .pixel{
     }
@@ -49,16 +49,31 @@ h1{
         }
 
     .loading {
-        justify-content: center;
         align-content: center;
+        justify-content: center;
+    }
+    #sketchpad::after{
+        background-color: rgba(204,204,204,0.25);
+        color: #FFF;
+        content: "Click to start/stop drawing";
+        font-family: sans;
+        font-size: 46px;
+        font-weight: bolder;
+        height: 600px;
+        position: absolute;
+        text-align: center;
+        width: 600px;
+    }
+    .hide-foreground::after{
+        display: none;
     }
     #spinner {
-        border: 16px solid #f8f8f8;
-        border-top: 16px solid #CCC;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
         animation: spin 1s linear infinite;
+        border-radius: 50%;
+        border-top: 16px solid #CCC;
+        border: 16px solid #f8f8f8;
+        height: 60px;
+        width: 60px;
     }
 
         @keyframes spin {
@@ -67,12 +82,14 @@ h1{
         }
 
 #main-buttons-area{
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
     .main-button {
+                transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
         border-radius: 2px;
         cursor:pointer;
         display: inline-flex;
@@ -80,8 +97,6 @@ h1{
         height: 36px;
         line-height: 36px;
         text-align: center;
-        -webkit-transition-duration: 0.2s; /* Safari */
-                transition-duration: 0.2s;
     }
         .main-button:hover{
             box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
@@ -133,31 +148,31 @@ h1{
     width: 36px;
 }
 #settings-mainlist{
-    font-family: sans-serif;
-    padding:9px 0;
     background-color: #DDD;
     border-radius: 2px;
-    position: absolute;
     bottom: 0px;
+    font-family: sans-serif;
+    padding:9px 0;
+    position: absolute;
     right: -46px;
 }
     #settings-mainlist::before{
-    background-image: url("../img/arrow.png");
-    background-repeat: no-repeat;
-    background-size: 10px 14px;
-    bottom: 11px;
-    content: "";
-    display: inline-block;
-    height: 14px;
-    left: -10px;
-    position: absolute;
-    width: 10px;
+        background-image: url("../img/arrow.png");
+        background-repeat: no-repeat;
+        background-size: 10px 14px;
+        bottom: 11px;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        left: -10px;
+        position: absolute;
+        width: 10px;
     }
     .main-setting-item{
         cursor:pointer;
         display: inline-block;
-        text-align: center;
         padding: 9px 0;
+        text-align: center;
         width: 36px;
     }
     .settings-sublist{
@@ -199,12 +214,12 @@ h1{
             color:#FFF;
         }
     .color-item{
-        -webkit-align-items: center;
                 align-items: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
         border-radius: 2px;
         display: flex;
-        -webkit-justify-content: center;
-                justify-content: center;
         height: 24px;
         width: 24px;
     }
