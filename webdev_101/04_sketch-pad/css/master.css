@@ -1,0 +1,254 @@
+body{
+    position: relative;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 600px;
+}
+
+h1{
+    color: #555;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: center;
+}
+#sketchpad{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    margin: 10px auto;
+    width: 600px;
+}
+    .pixel{
+    }
+        [data-pixsize='50']{
+            height: 50px;
+            width: 50px;
+        }
+        [data-pixsize='6']{
+            height: 6px;
+            width: 6px;
+        }
+        [data-pixsize='12']{
+            height: 12px;
+            width: 12px;
+        }
+        [data-pixsize='24']{
+            height: 24px;
+            width: 24px;
+        }
+        .drawn{
+            background-color: #555;
+        }
+
+    .loading {
+        align-content: center;
+        justify-content: center;
+    }
+    #sketchpad::after{
+        background-color: rgba(204,204,204,0.25);
+        color: #FFF;
+        content: "Click to start/stop drawing";
+        font-family: sans;
+        font-size: 46px;
+        font-weight: bolder;
+        height: 600px;
+        position: absolute;
+        text-align: center;
+        width: 600px;
+    }
+    .hide-foreground::after{
+        display: none;
+    }
+    #spinner {
+        animation: spin 1s linear infinite;
+        border-radius: 50%;
+        border-top: 16px solid #CCC;
+        border: 16px solid #f8f8f8;
+        height: 60px;
+        width: 60px;
+    }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+#main-buttons-area{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    .main-button {
+                transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s; /* Safari */
+        border-radius: 2px;
+        cursor:pointer;
+        display: inline-flex;
+        font-weight: bold;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+    }
+        .main-button:hover{
+            box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+        }
+
+        .main-button:active{
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16);
+        }
+
+        #clear{
+            background-color: #BBB;
+            color: #FFF;
+            font-family: sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+            #clear:hover{
+                background-color: #AAA;
+            }
+            #clear:active{
+                background-color: #999;
+            }
+        #settings-button{
+            background-color: #EEE;
+            color: #FFF;
+            line-height: 36px;
+            padding-left: 1em;
+            padding-right: 1em;
+            position: absolute;
+            right: 0;
+        }
+            #settings-button:hover{
+                background-color: #DDD;
+            }
+            #settings-button:active{
+                background-color: #CCC;
+            }
+            .settings-list-visible{
+                background-color: #DDD !important;
+            }
+
+.settings-list{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    width: 36px;
+}
+#settings-mainlist{
+    background-color: #DDD;
+    border-radius: 2px;
+    bottom: 0px;
+    font-family: sans-serif;
+    padding:9px 0;
+    position: absolute;
+    right: -46px;
+}
+    #settings-mainlist::before{
+        background-image: url("../img/arrow.png");
+        background-repeat: no-repeat;
+        background-size: 10px 14px;
+        bottom: 11px;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        left: -10px;
+        position: absolute;
+        width: 10px;
+    }
+    .main-setting-item{
+        cursor:pointer;
+        display: inline-block;
+        padding: 9px 0;
+        text-align: center;
+        width: 36px;
+    }
+    .settings-sublist{
+        background-color: #EEE;
+           -moz-box-shadow: inset  0  3px 3px -3px #333,
+                            inset  0 -3px 3px -3px #333;
+        -webkit-box-shadow: inset  0  3px 3px -3px #333,
+                            inset  0 -3px 3px -3px #333;
+                box-shadow: inset  0  3px 3px -3px #333,
+                            inset  0 -3px 3px -3px #333;
+    }
+
+    .sub-setting-item{
+        cursor: default;
+        display: inline-block;
+        margin: 6px 6px;
+        text-align: center;
+    }
+        .sub-setting-item:first-child {
+            margin-bottom: 12px;
+        }
+        .sub-setting-item:last-child{
+            margin-top: 12px;
+        }
+
+        [data-size="6"]{
+            font-weight:normal;
+        }
+        [data-size="12"]{
+            font-weight: normal;;
+        }
+        [data-size="24"]{
+            font-weight: bold;
+        }
+        [data-size="50"]{
+            font-weight: bolder;
+        }
+        .selected-size{
+            color:#FFF;
+        }
+    .color-item{
+                align-items: center;
+                justify-content: center;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        border-radius: 2px;
+        display: flex;
+        height: 24px;
+        width: 24px;
+    }
+        #chosen-color{
+            color: #FFF;
+            margin: -1px 0 0 -1px;
+        }
+
+        [data-color=pink] {
+            background-color: #f0a4ab;
+        }
+        [data-color=green] {
+            background-color: #d9e0b0;
+        }
+        [data-color=maroon] {
+            background-color: #f9dc86;
+        }
+        [data-color=orange] {
+            background-color: #ffa517;
+        }
+        [data-color=red] {
+            background-color: #f57650;
+        }
+        [data-color=blue] {
+            background-color: #3591d0;
+        }
+        [data-color=black] {
+            background-color: #555;
+        }
+        [data-color=blank] {
+            background-color: #FFF;
+        }

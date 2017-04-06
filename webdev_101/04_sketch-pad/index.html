@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sketchpad</title>
+        <link rel="stylesheet" type="text/css" href='css/reset.css'/>
+        <link rel="stylesheet" type="text/css" href='css/master.css'/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <main>
+            <h1>SketchPad</h1>
+            <section class="loading" id="sketchpad">
+                <div id="spinner"></div>
+            </section>
+            <ul id="main-buttons-area">
+                <li class="main-button" id='clear'>clear</li>
+                <li class="fa fa-cog main-button" id="settings-button"></li>
+            </ul>
+            <ul class="settings-list" id="settings-mainlist">
+                <li class="main-setting-item" id="settings-size"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> </li>
+                <ul class="settings-list settings-sublist" id="subsettings-size">
+                    <li class=" sub-setting-item size-item" data-size='6'>s</li>
+                    <li class="sub-setting-item size-item" data-size='12'>M</li>
+                    <li class=" sub-setting-item size-item" data-size='24'>L</li>
+                    <li class=" sub-setting-item size-item" data-size='50'>XL</li>
+                </ul>
+                <li class="main-setting-item" id="settings-color"><i class="fa fa-paint-brush" aria-hidden="true"></i></li>
+                <ul class="settings-list settings-sublist" id="subsettings-color">
+                    <li class=" sub-setting-item color-item" data-color='pink' id="pink"></li>
+                    <li class=" sub-setting-item color-item" data-color='green' id="green"></li>
+                    <li class=" sub-setting-item color-item" data-color='maroon' id="maroon"></li>
+                    <li class=" sub-setting-item color-item" data-color='orange' id="orange"></li>
+                    <li class=" sub-setting-item color-item" data-color='red' id="red"></li>
+                    <li class=" sub-setting-item color-item" data-color='blue' id="blue"></li>
+                    <li class=" sub-setting-item color-item" data-color='black' id="black"></li>
+                </ul>
+            </ul>
+        </main>
+
+        <script src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/master.js" charset="utf-8"></script>
+    </body>
+</html>
